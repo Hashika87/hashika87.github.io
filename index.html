@@ -1,552 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>BizNative ERP | Business Management Solution</title>
-
-<meta name="description" content="BizNative ERP - A modern business management solution by HASIBTT (PVT) LTD. Manage inventory, sales, customers, expenses and reports.">
-
-
-<style>
-
-*{
-box-sizing:border-box;
-}
-
-
-body{
-
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0f172a;
-color:#e5e7eb;
-line-height:1.7;
-
-}
-
-
-
-.container{
-
-max-width:1100px;
-margin:auto;
-padding:20px;
-
-}
-
-
-
-header{
-
-background:#111827;
-border-bottom:1px solid #1f2937;
-
-}
-
-
-
-.logo{
-
-font-size:32px;
-font-weight:bold;
-color:#38bdf8;
-
-padding:20px 0;
-
-}
-
-
-
-
-.hero{
-
-text-align:center;
-padding:80px 20px;
-
-}
-
-
-
-.hero h1{
-
-font-size:55px;
-margin-bottom:15px;
-color:white;
-
-}
-
-
-
-.hero h1 span{
-
-color:#38bdf8;
-
-}
-
-
-
-.hero p{
-
-font-size:22px;
-max-width:750px;
-margin:auto;
-color:#cbd5e1;
-
-}
-
-
-
-.download{
-
-display:inline-block;
-margin-top:35px;
-padding:16px 35px;
-background:#38bdf8;
-color:#0f172a;
-font-weight:bold;
-border-radius:12px;
-text-decoration:none;
-font-size:18px;
-
-}
-
-
-
-.download:hover{
-
-opacity:0.85;
-
-}
-
-
-
-
-.section{
-
-background:#111827;
-padding:40px;
-margin-top:30px;
-border-radius:20px;
-border:1px solid #1f2937;
-
-}
-
-
-
-.section h2{
-
-color:#60a5fa;
-font-size:30px;
-
-}
-
-
-
-
-.features{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:20px;
-
-}
-
-
-
-
-.card{
-
-background:#0b1220;
-padding:25px;
-border-radius:15px;
-border:1px solid #1f2937;
-
-}
-
-
-
-.card h3{
-
-color:#38bdf8;
-
-}
-
-
-
-
-.links a{
-
-color:#38bdf8;
-text-decoration:none;
-
-}
-
-
-
-.links a:hover{
-
-text-decoration:underline;
-
-}
-
-
-
-
-footer{
-
-text-align:center;
-padding:40px;
-margin-top:40px;
-border-top:1px solid #1f2937;
-color:#94a3b8;
-
-}
-
-
-
-
-@media(max-width:768px){
-
-
-.hero h1{
-
-font-size:38px;
-
-}
-
-
-.hero p{
-
-font-size:18px;
-
-}
-
-
-.section{
-
-padding:25px;
-
-}
-
-
-}
-
-
-</style>
-
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BizNative ERP | HASIBTT (PVT) LTD</title>
+
+    <meta name="description"
+          content="BizNative ERP by HASIBTT (PVT) LTD - Smart business management for inventory, sales, customers, expenses and reports.">
+
+    <meta name="author" content="HASIBTT (PVT) LTD">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f8f6;
+            color: #17231d;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #063b24, #087a48);
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        header .company {
+            font-size: 20px;
+            opacity: 0.95;
+            margin-bottom: 25px;
+        }
+
+        header h2 {
+            font-size: 34px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            max-width: 750px;
+            margin: 0 auto 30px;
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        .download {
+            display: inline-block;
+            background: white;
+            color: #087a48;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .download:hover {
+            background: #e9f7ef;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: #075b36;
+            margin-bottom: 35px;
+        }
+
+        .intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+            font-size: 17px;
+            color: #526158;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+        }
+
+        .feature {
+            background: white;
+            padding: 28px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e1ebe5;
+        }
+
+        .feature h3 {
+            color: #087a48;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .feature p {
+            color: #59675f;
+        }
+
+        .about {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            max-width: 850px;
+            margin: auto;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .about p {
+            color: #526158;
+            margin-bottom: 15px;
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .link-card {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e1ebe5;
+            transition: 0.3s;
+        }
+
+        .link-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .link-card a {
+            text-decoration: none;
+            color: #087a48;
+            font-weight: bold;
+        }
+
+        .support {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 17px;
+        }
+
+        .support a {
+            color: #087a48;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #063b24;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            opacity: 0.9;
+        }
+
+        .company-footer {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 50px 18px;
+            }
+
+            header h1 {
+                font-size: 36px;
+            }
+
+            header h2 {
+                font-size: 27px;
+            }
+
+            header .company {
+                font-size: 17px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 45px 18px;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+
+            .about {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
-
-
 
 <body>
 
+    <!-- HERO SECTION -->
+    <header>
 
+        <h1>BizNative ERP</h1>
 
-<header>
+        <div class="company">
+            by HASIBTT (PVT) LTD
+        </div>
 
-<div class="container">
+        <h2>Manage Your Business Smarter</h2>
 
-<div class="logo">
+        <p>
+            BizNative ERP is a modern business management solution designed
+            to help businesses manage inventory, sales, customers, expenses
+            and reports from one powerful platform.
+        </p>
 
-BizNative ERP
+        <a class="download"
+           href="https://play.google.com/store/apps/details?id=com.hasibtt.biznativeapp"
+           target="_blank"
+           rel="noopener">
+            Download BizNative ERP
+        </a>
 
-</div>
+    </header>
 
-</div>
 
-</header>
+    <!-- BUSINESS FEATURES -->
+    <section class="container">
 
+        <h2 class="section-title">Business Features</h2>
 
+        <div class="features">
 
+            <div class="feature">
+                <h3>📦 Inventory Management</h3>
+                <p>
+                    Manage products, stock levels and business inventory
+                    efficiently.
+                </p>
+            </div>
 
+            <div class="feature">
+                <h3>💰 Sales Management</h3>
+                <p>
+                    Track sales transactions and improve daily business
+                    operations.
+                </p>
+            </div>
 
-<section class="hero">
+            <div class="feature">
+                <h3>👥 Customer Management</h3>
+                <p>
+                    Maintain customer information and build stronger
+                    relationships.
+                </p>
+            </div>
 
+            <div class="feature">
+                <h3>📊 Reports & Analytics</h3>
+                <p>
+                    Understand your business performance with useful reports
+                    and insights.
+                </p>
+            </div>
 
-<h1>
+        </div>
 
-Manage Your Business
-<span>Smarter</span>
+    </section>
 
-</h1>
 
+    <!-- ABOUT COMPANY -->
+    <section class="container">
 
+        <h2 class="section-title">About HASIBTT (PVT) LTD</h2>
 
-<p>
+        <div class="about">
 
-BizNative ERP is a modern business management solution designed to help businesses manage inventory, sales, customers, expenses and reports from one powerful platform.
+            <p>
+                <strong>HASIBTT (PVT) LTD</strong> is a Sri Lankan technology
+                company developing innovative software solutions, AI-powered
+                systems, data analytics platforms and business applications.
+            </p>
 
-</p>
+            <p>
+                Our mission is to empower businesses through reliable,
+                secure and intelligent digital solutions.
+            </p>
 
+        </div>
 
+    </section>
 
 
-<a class="download"
+    <!-- IMPORTANT LINKS -->
+    <section class="container">
 
-href="https://play.google.com/store/apps/details?id=com.hasibtt.biznativeapp">
+        <h2 class="section-title">Important Links</h2>
 
-Download BizNative ERP
+        <div class="links">
 
-</a>
+            <div class="link-card">
+                <div style="font-size: 30px;">📱</div>
 
+                <a href="https://play.google.com/store/apps/details?id=com.hasibtt.biznativeapp"
+                   target="_blank"
+                   rel="noopener">
+                    Download Android App
+                </a>
+            </div>
 
-</section>
 
+            <div class="link-card">
+                <div style="font-size: 30px;">🔒</div>
 
+                <a href="https://hashika87.github.io/privacy-policy/"
+                   target="_blank"
+                   rel="noopener">
+                    Privacy Policy
+                </a>
+            </div>
 
 
+            <div class="link-card">
+                <div style="font-size: 30px;">📄</div>
 
-<div class="container">
+                <a href="https://hashika87.github.io/app-ads.txt"
+                   target="_blank"
+                   rel="noopener">
+                    AdMob app-ads.txt
+                </a>
+            </div>
 
+        </div>
 
 
-<section class="section">
+        <div class="support">
 
+            ✉️ Support:
 
-<h2>
+            <a href="mailto:hashika.shaman@gmail.com">
+                hashika.shaman@gmail.com
+            </a>
 
-Business Features
+        </div>
 
-</h2>
+    </section>
 
 
+    <!-- FOOTER -->
+    <footer>
 
-<div class="features">
+        <p class="company-footer">
+            HASIBTT (PVT) LTD
+        </p>
 
+        <p>
+            BizNative ERP - Smart Business Management Solution
+        </p>
 
-<div class="card">
+        <p>
+            © 2026 HASIBTT (PVT) LTD. All rights reserved.
+        </p>
 
-<h3>
-
-Inventory Management
-
-</h3>
-
-<p>
-
-Manage products, stock levels and business inventory efficiently.
-
-</p>
-
-</div>
-
-
-
-
-
-<div class="card">
-
-<h3>
-
-Sales Management
-
-</h3>
-
-<p>
-
-Track sales transactions and improve daily business operations.
-
-</p>
-
-</div>
-
-
-
-
-
-
-<div class="card">
-
-<h3>
-
-Customer Management
-
-</h3>
-
-<p>
-
-Maintain customer information and build stronger relationships.
-
-</p>
-
-</div>
-
-
-
-
-
-
-<div class="card">
-
-<h3>
-
-Reports & Analytics
-
-</h3>
-
-<p>
-
-Understand your business performance with useful reports and insights.
-
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section class="section">
-
-
-<h2>
-
-About HASIBTT (PVT) LTD
-
-</h2>
-
-
-
-<p>
-
-HASIBTT (PVT) LTD is a Sri Lankan technology company developing innovative software solutions, AI-powered systems, data analytics platforms and business applications.
-
-</p>
-
-
-
-<p>
-
-Our mission is to empower businesses through reliable, secure and intelligent digital solutions.
-
-</p>
-
-
-
-</section>
-
-
-
-
-
-
-
-<section class="section">
-
-
-<h2>
-
-Important Links
-
-</h2>
-
-
-
-<div class="links">
-
-
-<p>
-
-📱
-<a href="https://play.google.com/store/apps/details?id=com.hasibtt.biznativeapp">
-
-Download Android App
-
-</a>
-
-</p>
-
-
-
-
-<p>
-
-🔒
-<a href="privacy-policy/">
-
-Privacy Policy
-
-</a>
-
-</p>
-
-
-
-
-<p>
-
-📄
-<a href="app-ads.txt">
-
-AdMob app-ads.txt
-
-</a>
-
-</p>
-
-
-
-
-<p>
-
-✉️ Support:
-
-<a href="mailto:hashika.shaman@gmail.com">
-
-hashika.shaman@gmail.com
-
-</a>
-
-</p>
-
-
-
-</div>
-
-
-
-</section>
-
-
-
-</div>
-
-
-
-
-
-
-
-<footer>
-
-
-© 2026 HASIBTT (PVT) LTD.
-
-<br>
-
-BizNative ERP - Smart Business Management Solution
-
-
-</footer>
-
-
-
+    </footer>
 
 </body>
-
 </html>
